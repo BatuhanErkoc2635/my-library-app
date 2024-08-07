@@ -1,69 +1,70 @@
-const addButton = document.querySelector(".addButton")
-const tableMain = document.querySelector(".mainTable")
+const addButton = document.querySelector(".buttonSection")
+const booksSection = document.querySelector(".books-section")
+const closeButton = document.querySelector(".closeButton   ")
+const modal = document.querySelector("#modal")
 
 
-books = [];
 
 
 
-function Book (title, author, page){
-    this.title = title
-    this.author = author
-    this.page = page
-}
 
-function addNewBook(){
-    nameInput = document.getElementById("bname").value;
-    authorInput = document.getElementById("aname").value;
-    pageInput = document.getElementById("pcount").value;
-    let newBook = new Book (nameInput,authorInput,pageInput)
-    books.push(newBook)
-    addTableEntry(newBook.title,newBook.author,newBook.page)
-}
 
-function addTableEntry(name,author,page){
-    let newTableRow = document.createElement("tr")
-    let newTableBook = document.createElement("td")
-    let newTableAuthor = document.createElement("td")
-    let newTablePage = document.createElement("td")
-    let readCheck = document.createElement("td")
-    let readCheckButton = document.createElement("input")
-    let deleteCheck = document.createElement("td")
+
+function addNewBookArea(name,author,page){
+    let bookArea = document.createElement("div")
+    let bookTitle = document.createElement("h2")
+    let bookAuthor = document.createElement("h2")
+    let bookPage = document.createElement("h2")
+
+
+    let checkBoxArea = document.createElement("div")
+    checkBoxArea.setAttribute("class","checkbox")
+    let checkBoxText = document.createElement("h4")
+    checkBoxText.textContent = "Read Status"
+    let checkBoxInput = document.createElement("input")
+    checkBoxInput.setAttribute("type","checkbox")
+    
     let deleteButton = document.createElement("button")
     deleteButton.textContent = "DELETE"
-    readCheckButton.setAttribute("type","checkbox")
-    newTableBook.textContent = name
-    newTableAuthor.textContent = author
-    newTablePage.textContent = page
-    newTableRow.appendChild(newTableBook)
-    newTableRow.appendChild(newTableAuthor)
-    newTableRow.appendChild(newTablePage)
-    readCheck.appendChild(readCheckButton)
-    newTableRow.appendChild(readCheck)
-    deleteCheck.appendChild(deleteButton)
-    newTableRow.appendChild(deleteCheck)
-    deleteButton.addEventListener("click",() => {
-        newTableRow.remove()
-        
+
+    checkBoxArea.appendChild(checkBoxText)
+    checkBoxArea.appendChild(checkBoxInput)
+
+
+    bookTitle.textContent = name;
+    bookAuthor.textContent = author;
+    bookPage.textContent = page;
+
+    bookArea.setAttribute("class","book")
+    bookArea.appendChild(bookTitle)
+    bookArea.appendChild(bookAuthor)
+    bookArea.appendChild(bookPage)
+    bookArea.appendChild(checkBoxArea)
+    bookArea.appendChild(deleteButton)
+    booksSection.appendChild(bookArea)
+    
+    deleteButton.addEventListener("click", () => {
+        bookArea.remove();
     })
-    tableMain.appendChild(newTableRow)
+
 }
+
+
 
 
 
 addButton.addEventListener("click",() => {
-    addNewBook()
+    modal.showModal();
+}
+)
+closeButton.addEventListener("click",() => {
+    let bookTitleInput = document.querySelector("#title")
+    let authorTitleInput = document.querySelector("#author")
+    let pcountTitleInput = document.querySelector("#page-count")
+    addNewBookArea(bookTitleInput.value,authorTitleInput.value,pcountTitleInput.value)
+    modal.close();
     
-    console.log(books)
-    
-})
-
-
-
-
-
-
-
-
+}
+)
 
 

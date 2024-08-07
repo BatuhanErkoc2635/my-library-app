@@ -1,73 +1,163 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
 
 *{
-    background-color: #1F316F;
-    color: white;
-    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: "Platypi", serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 500;
     font-style: normal;
-    
+    color: #D6BD98;
 }
-.title{
+
+
+.whole-container{
+    height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.main-container{
-    display: flex;
-    justify-content: center;
+    background-color: #1A3636;
+    display: grid;
+    grid-template-rows: 1fr 20fr;
     
 }
-th, td{
-    margin-top: 10px;
-    border: black 3px dashed;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #1F316F;
-    font-weight: bold;
-    text-align: center;
+.logo{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    filter: drop-shadow(-1px 2px 1px black);
+
+}
+.buttonSection{
+    justify-self: end;
+}
+.header-section{
+    background-color: #1A3636;
+    padding: 20px;
    
-    vertical-align: middle;
-  }
-table{
-    height: 100px;
-    width: 500px;
-    border: #1F316F 3px outset;
-    margin-left: 50px;
-    border-radius: 20px;
     
-    background-color: #1F316F;
-    padding: 20px;
+}
+.header{
+    border-radius: 20px;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #40534C;
+    padding: 30px;
     filter: drop-shadow(-1px 3px 3px black);
+    border: #D6BD98 1px outset;
+}
+.header h2, h1{
+    filter: drop-shadow( 0px 2px 1px black);
+}
+.header button{
+    filter: drop-shadow( 0px 2px 1px black);
+    border: #D6BD98 2px outset;
+    padding: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 20px;
+    background-color: #1A3636;
+    font-size: 16px;
 }
 
-
-
-
-.addSection{
-    background-color:#1F316F;
+.bottom-section{
+    margin: 20px;
+    background-color: #40534C;
     border-radius: 20px;
+    filter: drop-shadow(-1px 3px 3px black);
+    display: grid;
+    padding: 30px;
+}
+.books-section{
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    border-radius: 20px;
+}
+.checkbox{
     display: flex;
-    padding: 20px;
-    width: 300px;
-    height: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    filter: drop-shadow( 0px 2px 1px black);
+}
+.checkbox input{
+    margin-left: 10px;
+}
+.book{
+    display: flex;
+    margin-right: 10px;
+    margin-top: 10px;
     flex-direction: column;
-    border: #1F316F 3px outset;
-    filter: drop-shadow(-1px 3px 3px black);
-    
-}
-label{
-    background-color: #1F316F;
-}
-input{
-    filter: drop-shadow(0px 2px 1px black);
-    background-color: #5B99C2;
-}
-button{
+    padding-top: 2px;
+    padding-bottom: 10px;
+    background-color: #677D6A;
     border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow( 0px 4px 3px black);
+}
+.book h2{
+    filter: drop-shadow( 0px 2px 1px black);
+
+}
+.book button{
+    margin-top: 10px;
+    background-color: #1A3636;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    filter: drop-shadow( 0px 5px px black);
+    border: #D6BD98 2px outset;
+}
+.modal{
+    justify-self: center;
+    margin-top: 10ch;
+    width: 35ch;
+    
+    padding: 20px;
+    height: 40ch;
+    background-color: #1A3636;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    filter: drop-shadow( 0px 2px 1px black);
+    border: #D6BD98 2px outset;
+    border-radius: 20px;
+}
+.modal div{
+    margin-top: 50px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.modal div input{
+    filter: drop-shadow( 0px 2px 1px black);
+    border: #D6BD98 2px outset;
+    color: black;
+}
+.modal::backdrop{
+    background-color: black;
+    opacity: 0.5;
+}
+.modal div label{
+    margin-bottom: 10px;
+}
+.modal div button{
     padding: 10px;
-    filter: drop-shadow(0px 2px 1px black);
+    border-radius: 5px;
+    background-color: #1A3636;
+    filter: drop-shadow( 0px 2px 1px black);
+    border: #D6BD98 2px outset;
 }

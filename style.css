@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    background-color: #1F316F;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    
+}
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    
+}
+th, td{
+    margin-top: 10px;
+    border: black 3px dashed;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #1F316F;
+    font-weight: bold;
+    text-align: center;
+   
+    vertical-align: middle;
+  }
+table{
+    height: 100px;
+    width: 500px;
+    border: #1F316F 3px outset;
+    margin-left: 50px;
+    border-radius: 20px;
+    
+    background-color: #1F316F;
+    padding: 20px;
+    filter: drop-shadow(-1px 3px 3px black);
+}
+
+
+
+
+.addSection{
+    background-color:#1F316F;
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    border: #1F316F 3px outset;
+    filter: drop-shadow(-1px 3px 3px black);
+    
+}
+label{
+    background-color: #1F316F;
+}
+input{
+    filter: drop-shadow(0px 2px 1px black);
+    background-color: #5B99C2;
+}
+button{
+    border-radius: 20px;
+    padding: 10px;
+    filter: drop-shadow(0px 2px 1px black);
+}
